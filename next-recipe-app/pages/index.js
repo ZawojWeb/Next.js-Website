@@ -2,6 +2,7 @@ import Head from 'next/head'
 import {urlFor, sanityClient} from "../lib/sanity"
 import Link from 'next/link'
 import styled from 'styled-components'
+import Image from "next/image"
 
 const recipiesQuery = `*[_type == "recipe"]{
   _id,
@@ -30,7 +31,7 @@ export default function Home({recipes}) {
           <li key={recipe._id}>
             <Link href={`/recipes/${recipe.slug.current}`}>
               <a>
-                <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
+                <Image src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
                 <span>{recipe.name}</span>
               </a>
             </Link>
