@@ -6,9 +6,9 @@
 * Dynamic Routes
 * Styled Components
 * Sanity CMS
- - Create custom viwes
- - Integration
- - Deploy as headless CMS
+  - Create custom viwes
+  - Integration
+  - Deploy as headless CMS
 * Have very simply like system
 
 This project is very easy do develop.
