@@ -1,6 +1,7 @@
 import { sanityClient, urlFor, usePreviewSubscription, PortableText } from "../../lib/sanity";
 import styled from "styled-components";
 import { useState } from "react";
+import { useRouter } from "next/dist/client/router";
 
 const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
     _id,
@@ -32,6 +33,10 @@ export default function OneRecipe({data}){
 
         const data = await res.json();
         setLikes(data.likes);
+    }
+    const router = useRouter()
+    if(router.isFallback){
+        return <h1>Is loading ...</h1>
     }
 
     return(
