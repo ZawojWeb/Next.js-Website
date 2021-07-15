@@ -20,6 +20,7 @@ const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
     instructions,
     likes
   }`;
+  
 
 export default function OneRecipe({data}){
     const router = useRouter()
