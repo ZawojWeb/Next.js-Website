@@ -23,6 +23,10 @@ const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
   }`;
 
 export default function OneRecipe({data}){
+    const router = useRouter()
+    if(router.isFallback){
+        return <h1>Is loading ...</h1>
+    }
     const {recipe} = data;
     const [likes, setLikes] = useState(data?.recipe?.likes)
 
@@ -34,10 +38,6 @@ export default function OneRecipe({data}){
 
         const data = await res.json();
         setLikes(data.likes);
-    }
-    const router = useRouter()
-    if(router.isFallback){
-        return <h1>Is loading ...</h1>
     }
 
     return(
