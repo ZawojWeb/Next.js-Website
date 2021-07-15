@@ -25,7 +25,7 @@ const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
 export default function OneRecipe({data}){
     const router = useRouter()
     const [likes, setLikes] = useState(data?.recipe?.likes)
-    
+
     if(router.isFallback){
         return <h1>Is loading ...</h1>
     }
@@ -48,7 +48,7 @@ export default function OneRecipe({data}){
                 {likes} ❤
             </button>
             <main>
-                <Image src={urlFor(recipe?.mainImage).url()} alt={recipe.name} />
+                <img src={urlFor(recipe?.mainImage).url()} alt={recipe.name} />
                 <div className="breakdown">
                     <ul>
                         {recipe.ingredient?.map((ingredient) =>(
