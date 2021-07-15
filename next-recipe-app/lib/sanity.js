@@ -16,7 +16,7 @@ const config = {
 export const sanityClient = createClient(config);
 export const usePreviewSubscription = createPortableTextComponent(config);
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
-export const portableText = createPortableTextComponent({
+export const PortableText = createPortableTextComponent({
     ...config,
     serializers:{},
 })
