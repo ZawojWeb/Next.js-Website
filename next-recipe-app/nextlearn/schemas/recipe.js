@@ -104,6 +104,14 @@ export default {
             of: [{
                 type:"block"
             }]
+        },
+        {
+            name:"likes",
+            title: "Likes",
+            type: "number"
         }
     ],
+    initiailValue:{
+        likes:0,
+    }
 };
