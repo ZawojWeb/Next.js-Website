@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 export default function Home({data}) {
   const recpies = data.recpies;
@@ -14,7 +15,9 @@ export default function Home({data}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
+          <Link href="/about">
             <a> {recpies[0].title}</a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
