@@ -1,5 +1,5 @@
 export default {
-    name : "recpie",
+    name : "recipe",
     title: "Recipe",
     type: "document",
 
