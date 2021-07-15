@@ -24,11 +24,12 @@ const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
 
 export default function OneRecipe({data}){
     const router = useRouter()
+    const [likes, setLikes] = useState(data?.recipe?.likes)
+    
     if(router.isFallback){
         return <h1>Is loading ...</h1>
     }
     const {recipe} = data;
-    const [likes, setLikes] = useState(data?.recipe?.likes)
 
     const addLike = async () =>{
         const res = await fetch("/api/handle-like",{
