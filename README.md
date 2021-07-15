@@ -7,7 +7,7 @@
 * Styled Components
 * Sanity CMS
   - Create custom viwes
-  - Integration
+  - Integration with front
   - Deploy as headless CMS
 * Have very simply like system
 
