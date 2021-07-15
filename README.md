@@ -12,4 +12,4 @@
 * Have very simply like system
 
 This project is very easy do develop.
-And is avible here: next-js-website-zawojweb.vercel.app
+And is avible here: https://next-js-website-zawojweb.vercel.app
