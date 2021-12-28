@@ -13,5 +13,3 @@
   - Deploy as headless CMS
 * Have very simply like system.
 
-This project is very easy do develop.
-And is available here: https://next-js-website-zawojweb.vercel.app
